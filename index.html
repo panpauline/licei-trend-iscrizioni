@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus iscrizioni liceali — Osservatorio nazionale 2014–2027</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Header */
+    .header {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .header-left { display: flex; align-items: center; gap: 1rem; }
+    .header-icon {
+      background: #4f46e5;
+      border-radius: 12px;
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .header-icon svg { width: 26px; height: 26px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    h1 { font-size: 1.5rem; font-weight: 700; color: #1e293b; }
+    .header-sub { font-size: 0.75rem; color: #94a3b8; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+
+    .zoom-controls { display: flex; flex-direction: column; gap: 6px; }
+    .zoom-label { font-size: 10px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.1em; }
+    .zoom-btns { display: flex; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 10px; padding: 3px; gap: 2px; }
+    .btn-zoom {
+      padding: 6px 14px; border-radius: 8px; font-size: 11px; font-weight: 600;
+      cursor: pointer; border: none; background: transparent; color: #64748b; transition: all .15s;
+    }
+    .btn-zoom.active { background: #fff; color: #4f46e5; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+
+    /* Main layout */
+    .main-layout { display: flex; gap: 1.25rem; align-items: flex-start; }
+
+    /* Sidebar */
+    .sidebar { width: 210px; flex-shrink: 0; display: flex; flex-direction: column; gap: 10px; }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .card-label {
+      font-size: 10px; font-weight: 600; color: #94a3b8;
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;
+    }
+
+    .leg-card {
+      display: flex; flex-direction: column;
+      padding: 8px 10px; border-radius: 8px;
+      border: 1px solid #f1f5f9; background: #fff;
+      cursor: pointer; transition: opacity .15s, border-color .15s;
+      margin-bottom: 4px;
+    }
+    .leg-card:hover { border-color: #c7d2fe; }
+    .leg-card.off { opacity: .3; filter: grayscale(1); }
+
+    .leg-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+    .leg-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+    .leg-name { font-size: 11px; font-weight: 500; color: #334155; line-height: 1.3; }
+    .badge-low {
+      font-size: 9px; padding: 1px 5px; border-radius: 4px;
+      background: #fef3c7; color: #92400e; flex-shrink: 0;
+    }
+    .leg-trend {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 5px; padding-top: 5px; border-top: 1px solid #f8fafc;
+    }
+    .leg-trend-year { font-size: 9px; color: #94a3b8; }
+    .leg-trend-val { font-size: 11px; font-weight: 600; }
+
+    .sidebar-actions { display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid #f1f5f9; }
+    .btn-text { font-size: 10px; background: none; border: none; cursor: pointer; font-weight: 600; padding: 0; }
+    .btn-text.primary { color: #4f46e5; }
+    .btn-text.muted { color: #94a3b8; }
+
+    .note-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 14px; font-size: 10px; color: #64748b; line-height: 1.7; }
+    .note-card strong { color: #334155; }
+
+    /* Chart area */
+    .chart-area { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+    .chart-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .chart-title { font-size: 13px; font-weight: 600; color: #1e293b; }
+    .legend-line { display: flex; align-items: center; gap: 14px; font-size: 11px; color: #94a3b8; }
+    .legend-line span { display: flex; align-items: center; gap: 5px; }
+
+    .chart-wrap { position: relative; width: 100%; height: 420px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem; }
+
+    /* Sources */
+    .sources {
+      border-top: 1px solid #e2e8f0; padding-top: 1.25rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+    .sources-col { display: flex; flex-direction: column; gap: 8px; }
+    .sources-label { font-size: 10px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.06em; }
+    .fonte-card { padding: 10px 12px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .fonte-link { font-size: 11px; font-weight: 600; color: #4f46e5; text-decoration: none; }
+    .fonte-link:hover { text-decoration: underline; }
+    .fonte-desc { font-size: 10px; color: #64748b; margin-top: 3px; line-height: 1.5; }
+    .fonte-card ol { font-size: 10px; color: #64748b; padding-left: 16px; line-height: 2; margin: 6px 0 0; }
+    .fonte-card ol strong { color: #334155; }
+    .fonte-note { font-size: 10px; color: #64748b; margin-top: 8px; line-height: 1.5; font-style: italic; }
+    .fonte-subtitle { font-size: 10px; font-weight: 600; color: #334155; margin-bottom: 3px; }
+
+    @media (max-width: 768px) {
+      .main-layout { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .sources { grid-template-columns: 1fr; }
+      .header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <div class="header-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
+      <div>
+        <h1>Focus iscrizioni liceali</h1>
+        <div class="header-sub">Osservatorio nazionale 2014 — 2027</div>
+      </div>
+    </div>
+    <div class="zoom-controls">
+      <div class="zoom-label">Scala asse Y</div>
+      <div class="zoom-btns">
+        <button class="btn-zoom active" id="btn-full" onclick="setZoom('full')">0–16%</button>
+        <button class="btn-zoom" id="btn-zoom" onclick="setZoom('zoom')">0–5%</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <div class="main-layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="card">
+        <div class="card-label">Indirizzi</div>
+        <div id="legend"></div>
+        <div class="sidebar-actions">
+          <button class="btn-text primary" onclick="setAll(true)">tutti</button>
+          <button class="btn-text muted" onclick="setAll(false)">nessuno</button>
+        </div>
+      </div>
+
+      <div class="note-card">
+        <strong>Nota metodologica.</strong> Dati 2014/15–2024/25: elaborazione da Open Data MIM, dataset Studenti della scuola secondaria di II grado per indirizzo, considerando gli studenti delle classi prime e calcolando, per ciascun indirizzo liceale, la quota percentuale sul totale degli iscritti alle classi prime della secondaria di II grado. Dato 2025/26: rilevazione MIM sulle iscrizioni online, sostanzialmente consolidata. Dato 2026/27: proiezione preliminare, rappresentata con tratteggio. Il trend di <em>Made in Italy</em> è calcolato dall'anno di istituzione (2024/25).
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-area">
+      <div class="chart-header">
+        <span class="chart-title">Iscrizioni classi prime — licei italiani (%)</span>
+        <div class="legend-line">
+          <span>
+            <svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="#888" stroke-width="2"/></svg>
+            consolidato
+          </span>
+          <span>
+            <svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="#888" stroke-width="2" stroke-dasharray="5,4"/></svg>
+            proiezione 2026/27
+          </span>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="enrollChart" role="img" aria-label="Andamento percentuale iscrizioni ai licei italiani 2014-2027. Dati consolidati fino al 2025/26. Solo il 2026/27 è proiezione preliminare."></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sources -->
+  <div class="sources">
+    <div class="sources-col">
+      <div class="sources-label">Fonti istituzionali (MIM)</div>
+      <div class="fonte-card">
+        <a class="fonte-link" href="https://www.mim.gov.it/pubblicazioni/-/asset_publisher/6Ya1FS4E4QJw/content/focus-principali-dati-della-scuola-avvio-anno-scolastico-2024-2025-" target="_blank" rel="noopener noreferrer">Focus Avvio A.S. 2024/25 ↗</a>
+        <div class="fonte-desc">Documento ufficiale del 20 settembre 2024 con tabelle analitiche per indirizzo.</div>
+      </div>
+      <div class="fonte-card">
+        <a class="fonte-link" href="https://www.mim.gov.it/documents/20182/0/focus_iscrizioni_as_2014_2015.pdf/7e5a7e0a-8909-4b43-844a-96e6e1365fb7?version=1.0" target="_blank" rel="noopener noreferrer">PDF Focus A.S. 2014/15 ↗</a>
+        <div class="fonte-desc">Archivio storico digitale relativo all'anno di avvio della serie temporale.</div>
+      </div>
+      <div class="fonte-card">
+        <a class="fonte-link" href="https://www.mim.gov.it/-/iscrizioni-2026-2027-si-consolida-il-successo-della-filiera-4-2-raddoppiano-gli-iscritti-boom-nel-mezzogiorno-licei-al-55-88-leggero-incremento-per-i-" target="_blank" rel="noopener noreferrer">Comunicato iscrizioni 2026/27 ↗</a>
+        <div class="fonte-desc">Comunicato MIM (marzo 2026) con percentuali preliminari per l'ultimo ciclo.</div>
+      </div>
+    </div>
+
+    <div class="sources-col">
+      <div class="sources-label">Verifica tramite portale Open Data</div>
+      <div class="fonte-card">
+        <div class="fonte-desc" style="margin:0 0 6px;">Per la verifica dei dataset granulari tramite il portale Open Data del Ministero:</div>
+        <ol>
+          <li>Accesso alla pagina principale: <a class="fonte-link" href="https://dati.istruzione.it/" target="_blank" rel="noopener noreferrer">dati.istruzione.it ↗</a></li>
+          <li>Sezione <strong>Esplora i dati</strong> → <strong>Catalogo Dataset</strong></li>
+          <li>Attivazione del filtro <strong>Scuola</strong> nel pannello di navigazione laterale</li>
+          <li>Ricerca del termine <strong>Studenti</strong> tramite l'apposita barra</li>
+          <li>Selezione del dataset annuale pertinente</li>
+          <li>Estrazione delle variabili di interesse mediante il <strong>pannello di destra</strong></li>
+        </ol>
+        <div class="fonte-note">Si precisa che il portale potrebbe non restituire contenuti qualora la consultazione non avvenga a partire dalla pagina principale. In tal caso è necessario accedere preliminarmente alla home del portale.</div>
+      </div>
+      <div class="fonte-card">
+        <div class="fonte-subtitle">Statuto dei dati</div>
+        <div class="fonte-desc">I dataset su dati.istruzione.it sono soggetti a revisione periodica. I dati definitivi vengono pubblicati solitamente a dodici mesi dall'avvio dell'anno scolastico.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const SPLIT = 11;
+const LABELS = ['2014/15','2015/16','2016/17','2017/18','2018/19','2019/20','2020/21','2021/22','2022/23','2023/24','2024/25','2025/26','2026/27'];
+
+const SERIES = [
+  { key:'scientificoTrad', name:'Scientifico tradizionale', color:'#1D9E75', vals:[14.9,14.8,14.7,14.7,14.5,14.3,14.1,14.1,14.0,14.1,13.7,13.5,13.2] },
+  { key:'scienzeApplicate', name:'Scienze applicate',       color:'#3b82f6', vals:[7.2,7.4,7.6,7.9,8.2,8.5,8.9,9.1,9.7,10.0,9.8,9.9,9.8] },
+  { key:'linguistico',     name:'Linguistico',              color:'#06b6d4', vals:[9.4,9.3,9.2,9.2,9.3,9.1,8.9,8.4,7.4,7.7,7.9,8.0,7.7] },
+  { key:'scienzeUmane',    name:'Scienze umane',            color:'#f59e0b', vals:[5.1,5.2,5.3,5.5,5.6,5.8,6.0,5.9,6.0,6.3,7.0,7.5,7.9] },
+  { key:'classico',        name:'Classico',                 color:'#6366f1', vals:[6.0,5.9,6.1,6.6,6.7,6.8,6.3,6.5,5.8,5.8,5.3,5.4,5.2] },
+  { key:'economicoSociale',name:'Economico sociale',        color:'#d97706', vals:[2.5,2.6,2.7,2.8,2.9,3.0,3.1,3.0,3.2,3.4,4.0,4.2,4.6] },
+  { key:'artistico',       name:'Artistico',                color:'#ec4899', vals:[3.9,4.1,4.0,4.1,4.0,3.9,4.4,5.1,4.1,4.0,4.4,4.0,4.0] },
+  { key:'sportivo',        name:'Scientifico sportivo',     color:'#8b5cf6', vals:[1.0,1.2,1.4,1.5,1.6,1.7,1.8,1.6,1.9,2.0,2.1,2.1,2.1] },
+  { key:'madeInItaly',     name:'Made in Italy',            color:'#ef4444', vals:[null,null,null,null,null,null,null,null,null,null,0.08,0.09,0.14], startIdx:10 }
+];
+
+const active = new Set(SERIES.map(s => s.key));
+let hoveredKey = null;
+
+function getTrend(s) {
+  const si = s.startIdx || 0;
+  const start = s.vals[si];
+  const end = s.vals[s.vals.length - 1];
+  if (start === null || end === null) return null;
+  return { diff: (end - start).toFixed(2), fromYear: LABELS[si] };
+}
+
+function isLow(s) {
+  const last = s.vals[s.vals.length - 1];
+  return last !== null && last < 1.5;
+}
+
+function hexToRgb(hex) {
+  return `${parseInt(hex.slice(1,3),16)},${parseInt(hex.slice(3,5),16)},${parseInt(hex.slice(5,7),16)}`;
+}
+
+function buildDatasets() {
+  const ds = [];
+  SERIES.forEach(s => {
+    if (!active.has(s.key)) return;
+    const isFocus = hoveredKey === s.key;
+    const alpha = hoveredKey !== null ? (isFocus ? 1 : 0.12) : 1;
+    const sw = isFocus ? 3 : 2;
+    const si = s.startIdx || 0;
+    const solidData = s.vals.map((v,i) => (i >= si && i <= SPLIT) ? v : null);
+    const dashData  = s.vals.map((v,i) => i >= SPLIT ? v : null);
+    const base = { backgroundColor:'transparent', borderWidth:sw, tension:0.25, spanGaps:false, borderCapStyle:'round' };
+    ds.push({ ...base, label:s.name, data:solidData,
+      borderColor:`rgba(${hexToRgb(s.color)},${alpha})`,
+      pointRadius:isFocus?4:3, pointHoverRadius:5,
+      pointBackgroundColor:`rgba(${hexToRgb(s.color)},${alpha})` });
+    ds.push({ ...base, label:s.name+'__dash', data:dashData,
+      borderColor:`rgba(${hexToRgb(s.color)},${alpha})`,
+      borderDash:[6,5], pointRadius:isFocus?4:3, pointHoverRadius:5,
+      pointBackgroundColor:'#fff',
+      pointBorderColor:`rgba(${hexToRgb(s.color)},${alpha})`,
+      pointBorderWidth:1.5 });
+  });
+  return ds;
+}
+
+const ctx = document.getElementById('enrollChart').getContext('2d');
+const chart = new Chart(ctx, {
+  type:'line',
+  data:{ labels:LABELS, datasets:buildDatasets() },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    interaction:{ mode:'index', intersect:false },
+    plugins:{
+      legend:{ display:false },
+      tooltip:{
+        filter: item => !item.dataset.label.endsWith('__dash') && item.raw !== null,
+        callbacks:{
+          title: items => 'Anno scolastico ' + items[0].label,
+          label: item => {
+            if (item.raw === null) return null;
+            const isProj = item.dataIndex > SPLIT;
+            return ' ' + item.dataset.label + ': ' + item.raw + '%' + (isProj ? ' *' : '');
+          },
+          afterBody: items => {
+            const hasProj = items.some(i => i.dataIndex > SPLIT && i.raw !== null);
+            return hasProj ? ['','* proiezione preliminare'] : [];
+          }
+        },
+        bodyFont:{size:11}, titleFont:{size:12,weight:'500'}, padding:12, cornerRadius:10
+      }
+    },
+    scales:{
+      x:{ ticks:{ font:{size:10}, maxRotation:45, color:'#94a3b8', autoSkip:false }, grid:{ display:false }, border:{ display:false } },
+      y:{ min:0, max:16, ticks:{ font:{size:10}, color:'#94a3b8', callback:v=>v+'%' }, grid:{ color:'rgba(148,163,184,0.15)' }, border:{ display:false } }
+    }
+  },
+  plugins:[{
+    id:'projBg',
+    beforeDraw(chart) {
+      const { ctx, chartArea, scales } = chart;
+      if (!chartArea) return;
+      const x1 = scales.x.getPixelForValue(SPLIT);
+      ctx.save();
+      ctx.fillStyle = 'rgba(148,163,184,0.07)';
+      ctx.fillRect(x1, chartArea.top, chartArea.right-x1, chartArea.bottom-chartArea.top);
+      ctx.restore();
+    }
+  }]
+});
+
+function setZoom(mode) {
+  chart.options.scales.y.max = mode === 'zoom' ? 5 : 16;
+  chart.update('none');
+  document.getElementById('btn-full').classList.toggle('active', mode==='full');
+  document.getElementById('btn-zoom').classList.toggle('active', mode==='zoom');
+}
+
+function refreshChart() {
+  chart.data.datasets = buildDatasets();
+  chart.update('none');
+}
+
+function setAll(on) {
+  SERIES.forEach(s => on ? active.add(s.key) : active.delete(s.key));
+  document.querySelectorAll('.leg-card').forEach(b => b.classList.toggle('off', !on));
+  refreshChart();
+}
+
+// Build legend
+const legContainer = document.getElementById('legend');
+SERIES.forEach(s => {
+  const trend = getTrend(s);
+  const diff = trend ? parseFloat(trend.diff) : 0;
+  const trendColor = diff >= 0 ? '#1D9E75' : '#E24B4A';
+  const low = isLow(s);
+
+  const card = document.createElement('div');
+  card.className = 'leg-card';
+  card.innerHTML = `
+    <div class="leg-row">
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span class="leg-dot" style="background:${s.color};"></span>
+        <span class="leg-name">${s.name}</span>
+      </div>
+      ${low ? '<span class="badge-low" title="Quota ridotta: usare vista 0–5%">bassa</span>' : ''}
+    </div>
+    ${trend ? `
+    <div class="leg-trend">
+      <span class="leg-trend-year">dal ${trend.fromYear}</span>
+      <span class="leg-trend-val" style="color:${trendColor};">${diff>=0?'↑':'↓'} ${Math.abs(diff).toFixed(2)} p.p.</span>
+    </div>` : ''}`;
+
+  card.addEventListener('mouseenter', () => { hoveredKey = s.key; refreshChart(); });
+  card.addEventListener('mouseleave', () => { hoveredKey = null; refreshChart(); });
+  card.addEventListener('click', () => {
+    if (active.has(s.key)) { active.delete(s.key); card.classList.add('off'); }
+    else { active.add(s.key); card.classList.remove('off'); }
+    refreshChart();
+  });
+  legContainer.appendChild(card);
+});
+</script>
+</body>
+</html>
