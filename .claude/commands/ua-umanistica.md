@@ -52,7 +52,7 @@ _(formulazione in termini di "Lo studente è in grado di…")_
 - Collaborare e contribuire al lavoro collettivo
 - Pensiero critico: valutare fonti, smontare luoghi comuni, riconoscere bias
 
-### Competenze digitali e AI Literacy (DigComp 2.2 / Linee guida MIM sull'AI)
+### Competenze digitali e AI Literacy (DigComp 3.0 / Linee guida MIM sull'AI)
 - Ricercare, valutare e gestire informazioni digitali
 - Comunicare e collaborare in ambienti digitali
 - Creare contenuti digitali in modo consapevole
@@ -207,7 +207,7 @@ _(domande guida per far emergere limiti, allucinazioni, bias, questioni etiche)_
 
 **Prodotto atteso**
 
-**Competenza DigComp 2.2 sviluppata**
+**Competenza DigComp 3.0 sviluppata**
 
 ---
 
