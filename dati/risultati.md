@@ -1,0 +1,99 @@
+# Archivio bandi formatori trovati
+
+## Ricerca del 2026-05-26 17:58 UTC
+
+- [PROGETTO: D.M. 38/2026 Avviso 95165 del 24/04/2026 FORMAZIONE DOCENTI MIM – PN SCUOLA 2021-2027 – ESO4.5 – Sotto- Azione: ESO4.5.A2.B – CUP: J24D26000740007 – Istituto Comprensivo Caloprese – Scalea](https://www.icscalea.edu.it/2026/05/23/avviso-95165-del-24-04-2026-dm-38-2026-formazione-docenti-mim-pn-scuola-2021-2027-eso4-5-sotto-azione-eso4-5-a2-b-cup-a-j24d26000740007)
+  - Particolare attenzione deve essere ... dei formatori e alla registrazione delle presenze dei partecipanti alle attività formative. È possibile richiedere uno o più moduli della durata di 30 o 60 ore della stessa tipologia per un maggiore rafforzamento della formazione ovvero per ampliare la platea dei possibili beneficiari dei percorsi formativi. ART. 12 – DISPOSIZIONE FINALI Tutta la documentazione di riferimento del presente Avviso, i Regolamenti ...
+- [DM 38/2026 – Avviso 95165 – Formazione personale - Istituto Comprensivo D'Ovidio](https://www.icdovidiocb.edu.it/pn-scuola-e-competenze-2021-2027/dm-38-2026-avviso-95165-formazione-personale)
+  - 3 weeks ago - Progetti PN 21/27 PN 21-27 Piano ... Avviso 53338/2026 DM 38/2026 – Avviso 95450 – Dispositivi digitali DM 38/2026 – Avviso 95165 – Formazione personale...
+- [Formatori: Home](https://formatori.eu)
+  - Snodi Intelligenza Artificiale, Formazione Docenti Avviso 95165 ESO4.5.A2.B (D.M. 38/2026), Formazione ATA Avviso 95498 ESO4.5.A2.B (D.M. 40/2026). Supporto ...
+- [DM 38/2026 - Formazione Docenti - Qualifica GROUP](https://qualificagroup.it/istruzione/dm-38-2026-formazione-docenti)
+  - Formazione docenti È stato pubblicato il nuovo Avviso 95165, collegato al Decreto Ministeriale n. 38 del 6 marzo 2026 (DM 38/2026), nell'ambito del Programma Nazionale "PN Scuola e competenze 2021-2027". L'intervento è finalizzato al potenziamento delle competenze professionali del personale docente ed educativo e rappresenta una nuova opportunità per le istituzioni scolastiche ...
+- [Formazione del personale docente ed educativo della scuola - Giustoscuola](https://giustoscuola.it/it/archivio-notizie/4261-formazione-del-personale-docente-ed-educativo-della-scuola.html)
+  - Si fa riferimento all'Avviso 95165, che segue al D.M.
+- [Formazione Docenti: Piano Scuola](https://formazione.deascuola.it/formazione-docenti-piano-scuola)
+  - DM 38, avviso 95165. Potenziare le competenze professionali dei docenti. Scopri di più. Le competenze socio-emotive. Sperimentazione sulle competenze ...
+- [Formazione docenti - iccodigoro](https://iccodigoro.edu.it/formazione-docenti)
+  - ... Avviso 95165 del 24-04-2026 – “Formazione docenti”. La Scuola. Presentazione · I luoghi · Le Persone · I numeri della scuola · Le carte della scuola ...
+- [PN SCUOLA E COMPETENZE 2021-2027 – icmantova1](https://icmantova1.edu.it/pn-scuola-e-competenze-2021-2027)
+  - Avviso 95165 – potenziamento delle competenze professionali del personale docente ed educativo mediante azioni formative nell'ambito del Programma Nazionale ...
+- [A settembre formazione obbligatoria per gran parte degli insegnanti!?](https://www.euroedizioni.it/198-notizie/698544-a-settembre-formazione-obbligatoria-per-gran-parte-degli-insegnanti)
+  - Si fa riferimento all'Avviso 95165, che segue al D.M. n.38 del 6 marzo 2026, esplicita la destinazione di risorse per la formazione del personale docente ed ...
+- [PN 2127 – COESIONE ITALIA – OM Giano Dell'Umbria Bastardo](https://iogiano.edu.it/coesione-italia)
+  - Avviso 95165 – FSE+ Formazione del personale docente e non docente ORIENTAMENTO I GRADO – Avviso Prot. 57173, 14/04/2025, FSE+ AGENDA NORD – Avviso Prot.
+- [[PDF] Ministero dell'istruzione e del merito Istituto Comprensivo Castellabate](https://www.iccastellabate.edu.it/iccastellabate/filesId/2362/false/Circolare_n._243_–_INTEGRAZIONE_.pdf)
+  - 7 mag 2026 · Adesione Avviso 95165 del 24/04/2026 – Interventi di formazione in servizio del personale docente e non docente per garantire la qualità ...
+- [Convocazione Collegio docenti unificato – Rettifica](https://www.icfalconescaudatorredelgreco.edu.it/circolare/convocazione-collegio-docenti-unificato-rettifica)
+  - 15 mag 2026 · AVVISO 95165 del 24/04/2026: AZIONI RIVOLTE ALLA FORMAZIONE DEL PERSONALE DOCENTE: delibera; 5. AVVISO 95450 del 24/04/2026: ACQUISTO DI ...
+- [Ufficio Segreteria | Albo On-Line | "Don Giovanni Antonioli" - CKube](https://icpontedilegno.trasparenza.apps.ckube.it/pages/albo/?Emittente_Id=88801799)
+  - ... avviso 95165 del 24 aprile 2026 “FORMAZIONE DOCENTI”. Delibere di Consiglio d'Istituto. emittente: Ufficio Segreteria. numero atto/documento: n.prot.1879 II.1 ...
+- [[PDF] Istituto di Istruzione Superiore “BERTRAND RUSSELL”](https://www.russell-fontana.edu.it/web/wp-content/plugins/download-attachments/includes/download.php?id=15709)
+  - 5 mag 2026 · 3) Delibera di partecipazione Avviso: 95165 del 24/04/2026 - Fse+ - Formazione Docenti. La Dirigente Scolastica prof.ssa Giuseppina Pelella.
+- [DM 38/2026 Formazione docenti e acquisto dispositivi digitali](https://www.elissrl.net/post/dm-38-2026-formazione-docenti-e-acquisto-dispositivi-digitali)
+  - Avviso 95165: formazione docenti e personale educativoPubblicato l’Avviso n. 95165, in attuazione del Decreto Ministeriale n. 38 del 6 marzo 2026, finalizzato al potenziamento delle...
+- [DM 38/2026: due opportunità di finanziamento per le scuole](https://www.anastasis.it/news-eventi/dm-38-2026-due-opportunita-di-finanziamento-per-le-scuole)
+  - L’Avviso 95165 finanzia percorsi formativi per docenti e personale educativo nell’ambito del Programma Nazionale “PN Scuola e competenze 2021-2027”.
+- [Fabbisogno formativo docenti Avviso pubblico Prot. 95165 del 24 aprile 2026 – Istituto Giuseppe Montalto – Misiliscemi](https://www.icgiuseppemontalto.edu.it/circolare/fabbisogno-formativo-docenti-avviso-pubblico-prot-95165-del-24-aprile-2026)
+  - April 24, 2026 - Da qui puoi accedere ai diversi servizi della scuola che richiedono una autenticazione personale · Entra nel sito della scuola con le tue credenziali per gestire contenuti, visualizzare circolari e altre funzionalità
+- [PN 2021-2027 Formazione personale docente ed educativo - D.M. 38/2026](https://www.sinergiediscuola.it/pacchetti-modelli/pn-2021-2027-formazione-personale-docente-ed-educativo-d-m-38-2026.html)
+  - 11 mag 2026 · La finalità della misura: formazione come leva di modernizzazione del sistema; L'Avviso prot. 95165/2026: beneficiari, destinatari e tempi ...
+- [Formazione docenti – Programma Nazionale 2021-2027](https://pn20212027.istruzione.it/avvisi/formazione-docenti)
+  - Il presente avviso è finalizzato al potenziamento delle competenze professionali del personale docente ed educativo mediante azioni formative nell’ambito del Programma Nazionale “Scuola e competenze” 2021-2027. Proroga scadenza invio candidature (Prot. 123912 del 15 maggio 2026) Avviso di chiarimenti (Prot. 99122 del 29 aprile 2026) Decreto Ministeriale n. 38 del 6 marzo 2026 (Pubblicazione del 24 marzo 2026) Avviso pubblico (Prot. 95165 del 24 aprile 2026)
+- [CIRCOLARE 300 - Istituto Comprensivo Statale Cassarà - Guida Partinico](https://www.istitutocomprensivocassara.edu.it/circolare/circolare-300)
+  - AVVISO prot. 95165 del 24 aprile 2026 PN 2021/2027 Allegato 1 DM 38/2026 - Destinazione di risorse per la formazione del personale docente al fine di potenziare le competenze professionali, nell'ambito del Programma Nazionale "PN Scuola e competenze 2021-2027", in attuazione del regolamento (UE) 2021/1060, nonché destinazione di ...
+- [MIM - "Avviso pubblico “Formazione docenti” nell'ambito del Programma ...](https://www.opencup.gov.it/portale/web/opencup/notizie/-/asset_publisher/moboWPbIiU6R/content/mim-avviso-pubblico-formazione-docenti-nell-ambito-del-programma-nazionale-pn-scuola-e-competenze-2021-2027-del-24-aprile-2026.?_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_moboWPbIiU6R_assetEntryId=403783)
+  - 24 apr 2026 · A2.B Interventi di formazione in servizio del personale docente, DM 38/2026 Formazione docenti, Avviso prot. 95165 del 24 aprile 2026. Sono ...
+- [MIM - "Avviso pubblico “Formazione docenti” nell'ambito ... - Open Cup](https://www.opencup.gov.it/portale/web/opencup/home/-/asset_publisher/a5SG2OwzRtgy/content/mim-avviso-pubblico-formazione-docenti-nell-ambito-del-programma-nazionale-pn-scuola-e-competenze-2021-2027-del-24-aprile-2026.?_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_a5SG2OwzRtgy_assetEntryId=403783)
+  - ... formazione in servizio del personale docente, DM 38/2026 Formazione docenti, Avviso prot. 95165 del 24 aprile 2026. Sono disponibili istruzioni operative ...
+- [Novità - Istituto Comprensivo Statale "Giovanni Falcone"](https://www.icsgiovannifalcone.edu.it/novita)
+  - Disseminazione interna Avvisi prot. 95165 e prot. 95450 del 24.04.2026 finalizzati, rispettivamente, alla formazione del personale docente ed educativo. Circ ...
+- [MIM - "Avviso pubblico “Formazione docenti” nell'ambito ... - Open Cup](https://www.opencup.gov.it/portale/web/opencup/notizie/-/asset_publisher/gMuyrY6RXoob/content/mim-avviso-pubblico-formazione-docenti-nell-ambito-del-programma-nazionale-pn-scuola-e-competenze-2021-2027-del-24-aprile-2026.?_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_gMuyrY6RXoob_assetEntryId=403783)
+  - ... formazione in servizio del personale docente, DM 38/2026 Formazione docenti, Avviso prot. 95165 del 24 aprile 2026. Sono disponibili istruzioni operative ...
+- [Amministrazione Trasparente | Istituto Comprensivo «Pasquale Mattej»](https://www.icmattej.edu.it/amministrazione-trasparente)
+  - ... selezione e titolari di posizione organizzativa con funzioni dirigenziali ... Prot. 95165 del 24 aprile 2026. Pubblicato il: 14/05/2026; Tipologia: Atti ...
+- [[PDF] Montecatini Terme, 15/09/2012](https://statalemontecatiniterme.edu.it/wp-content/uploads/sites/1119/NR.-156-Collegio-UNITARIO-14-MAGGIO-2026.pdf?x66665)
+  - 7) PN 2021-2027 – FSE+ Avviso MIM prot. 95165 del 24.04.2026 – Formazione del personale docente ed educativo - : delibere correlate. 8) PON “Per la Scuola” 2014 ...
+- [[PDF] Istituto Comprensivo Statale "Vincenzo Laurenza" Teano](https://www.iclaurenzateano.edu.it/wp-content/uploads/2026/05/timbro_Circolare-n.-190-–-Convocazione-Collegio-Docenti-18.05.2026-ore-17.30-signed.pdf)
+  - 11 mag 2026 · n Prot. 95165 del 24/04/2026 Azione: ESO4.5.A2 Formazione del ... Adesione all'avviso pubblico Prot. 95498 del 24/04/2026 per azioni rivolte alla ...
+- [Delibere Organi Collegiali | I.T.S. Marco Polo di Verona](https://www.marcopolovr.edu.it/carte-della-scuola?id=368)
+  - Delibera 21 2026 del 07_05_2026 PARTECIPAZIONE AVV. PUBBL prot 95165.pdf. File PDF Contatore click: 0. Delibera 20 2026 del 07_05_2026 ADESIONE AVV. PUBBL ...
+- [AVVISO per selezione formatori esperti e tutor, interni ed ...](https://www.icritalevimontalciniag.edu.it/wp-content/uploads/2024/06/timbro_AVVISO-per-selezione-formatori-esperti-e-tutor-interni-ed-esterni-D.M.65_-Progetto-M4C1I3.1-2023-1143-P-32528-CUP-J44D23002580006-signed-1.pdf)
+  - ● A.1 “Percorsi di orientamento e formazione per il potenziamento delle competenze STEM, digitali e di · innovazione”: max n.9 FORMATORI ESPERTI e max n.9 TUTOR
+- [Avviso di selezione interna ed esterna per formatori esperti e tutor – IC Bolzano 1](https://icbz1.edu.it/documento/avviso-di-selezione-interna-ed-esterna-per-formatori-esperti-e-tutor)
+  - AVVISO DI SELEZIONE INTERNA ED ESTERNA PER FORMATORI ESPERTI E TUTOR Aventi ad oggetto la realizzazione di n. 10 percorsi per la realizzazione di Azioni di potenziamento delle competenze STEM e multilinguistiche – Intervento A
+- [Avvisi – Programma Nazionale 2021-2027](https://pn20212027.istruzione.it/avvisi)
+  - Avvisi ; Formazione docenti, FSE+, 95165/2026 ; Formazione personale ATA, FSE+, 95498/2026 ; Laboratori per licei scientifici ad indirizzo sportivo, FESR, 158249 ...Mancanti: selezione esperti
+- [GESTIONE DEI COMPENSI ACCESSORI - Euroedizioni Torino](https://www.euroedizioni.it/198-notizie/698580-gestione-dei-compensi-accessori)
+  - Formazione del personale docente ed educativo della scuola ... Si fa riferimento all'Avviso 95165, che segue al D.M. n.38 del 6 marzo 2026, esplicita la ...
+- [Consiglio di Istituto](https://www.iclinguaglossacali.edu.it/struttura/consiglio-di-istituto)
+  - DELIBERA N. 135 del Verbale 19(24/27) del 08/05/2026. Il Consiglio di Istituto approva l'adesione all'Avviso 95165 del 24/04/2026 per azioni rivolte alla ...
+- [CONCORSO DIRIGENTE TECNICO PROVA PRESELETTIVA](https://www.euroedizioni.it/198-notizie/698158-concorso-dirigente-tecnico-prova-preselettiva)
+  - Si fa riferimento all'Avviso 95165, che segue al D.M. n.38 del 6 marzo 2026 ... La Formazione Scuola-Lavoro (FSL) e il modello 4+2. Verso una nuova ...
+- [Piano estate – Programma Nazionale 2021-2027](https://pn20212027.istruzione.it/avvisi/piano-estate)
+  - L'Avviso intende ampliare e sostenere l'offerta formativa con azioni specifiche volte a promuovere iniziative per gli apprendimenti, l'aggregazione, ...Mancanti: selezione formatori formazione
+- [DM 38 del 2026 - Bando formazione docenti | Campustore](https://www.campustore.it/bandi-e-finanziamenti/pn-scuola-e-competenze-2021-2027/dm-38-2026-formazione-docenti.html?srsltid=AfmBOookAPtSnOaW7BqaNjTmEu8IMD2rBlwCBqUZD7NdAIskP1bYGZ-I)
+  - Con il Decreto ministeriale n. 38 del 6 marzo 2026 sono state messe a disposizione risorse per la formazione del personale docente. La formazione può ...Mancanti: formatori | Deve includere:formatori
+- [Piano Nazionale Scuola e Competenze 2021 – 2027 (FSE+)](https://www.iccesalpino.edu.it/pagine/piano-estate)
+  - Avviso per la procedura di selezione di personale interno per l ... 2 docente formatori per la durata di 15 ore ciascuno ▫ n. 2 docente tutor ...
+- [[PDF] AVVISO DI SELEZIONE DI ESPERTI FORMATORI E TUTOR](https://vsdoberdob.edu.it/wp-content/uploads/2026/05/2-AVVISO-DI-SELEZIONE-DI-ESPERTI-FORMATORI-E-TUTOR.pdf)
+  - 96 – Avviso Pubblico prot. n. 81652 del 23/05/2025 – “Percorsi educativi e formativi per il potenziamento delle competenze, l'inclusione e la socialità nel ...
+- [Avviso M.I.M. 24.04.2026, prot. n. 95165 — Notizie della scuola](https://www.notiziedellascuola.it/legislazione-e-dottrina/indice-cronologico/2026/aprile/AVVISO_MIM_20260424_prot95165)
+  - Avviso pubblico per azioni rivolte alla formazione del personale docente ed educativo al fine di potenziare le competenze professionali, nell'ambito del Programma Nazionale "PN Scuola e competenze 2021-2027", in attuazione del regolamento (UE) 2021/1060.
+- [AVVISO PUBBLICO SELEZIONE ESPERTI E TUTOR PERCORSI PNRR DISPERSIONE | Le notizie](https://www.fermitivoli.edu.it/categoria/le-notizie/3117/avviso-pubblico-selezione-esperti-e-tutor-percorsi-pnrr-dispersione)
+  - In allegato l'avviso pubblico di selezione per docenti esperti e formatori per · la realizzazione dei percorsi di: POTENZIAMENTO DELLE COMPETENZE DI BASE, DI MOTIVAZIONE E ACCOMPAGNAMENTO · PERCORSI FORMATIVI E LABORATORIALI CO-CURRICULARI · PERCORSI DI MENTORING E ORIENTAMENTO INDIVIDUALI ·
+- [Decreto dirigenziale di pubblicazione dell’elencazione alfabetica definitiva rettificata e integrata e relativa elencazione debitamente allegata per la selezione di personale interno all’Istituto interessato a ricoprire il ruolo di esperti formatori per la conduzione dei percorsi di potenziamento delle competenze di Italiano afferenti al progetto L’AGENDA SUD AL NERVI ALAIMO E LA SFIDA ALLA DISPERSIONE. – I.I.S. "Nervi – Alaimo" – Lentini (SR)](https://www.istitutonervialaimo.edu.it/2026/05/21/decreto-dirigenziale-di-pubblicazione-dellelencazione-alfabetica-definitiva-rettificata-e-integrata-e-relativa-elencazione-debitamente-allegata-per-la-selezione-di-personale-interno-all)
+  - Decreto dirigenziale di pubblicazione ... di Italiano afferenti al progetto L’AGENDA SUD AL NERVI ALAIMO E LA SFIDA ALLA DISPERSIONE. PROT. 10787 DEL 21-05-2026 Decreto dirigenziale di pubblic....
+- [PNRR: Avviso pubblico di selezione di figure di esperti e tutor(potenziamento delle competenze linguistiche D.M.65)](https://www.majoranaiiss.edu.it/news/103-avvisi/400-avviso-pubblico-per-l-affidamento-di-incarico-n-1-esperto-formatore-2)
+  - AVVISO PUBBLICO DI SELEZIONE DI FIGURE DI ESPERTI E TUTOR PER PERCORSI DI FORMAZIONE PER IL POTENZIAMENTO DELLE COMPETENZE LINGUISTICHE DEGLI STUDENTI (LINEA DI INTERVENTO A) E DI ESPERTI PER PERCORSI FORMATIVI ANNUALI DI LINGUA E METODOLOGIA PER DOCENTI (LINEA DI INTERVENTO B)
+- [Microsoft Word - RECLUTAMENTO DOCENTI palermo](https://www.consorzioulisse.net/wp-content/uploads/2024/10/BANDO-RECLUTAMENTO-DOCENTI.pdf)
+  - Il formatore gestisce ed è responsabile dei servizi e/o delle attività necessarie all’utenza per l’acquisizione e/o il potenziamento di conoscenze, capacità e competenze in coerenza con la progettazione formativa.
+- [Bandi di reclutamento personale e allievi disposti da Enti di Formazione | Regione Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/assessorato-istruzione-formazione-professionale/dipartimento-formazione-professionale/bandi-reclutamento-personale-allievi-disposti-enti-formazione)
+  - ENAIP PALERMO - RECLUTAMENTO ALLIEVI CS5566 ED25758 - Bando integrativo reclutamento allievi- Bando Personale Formatore ... ASSOCIAZIONE IDEA) (ALLIEVI) - DOCENTI - Avv. 6 personale non docente - personale docente Avviso 6 ... ANAPROF - selezione docenti - Personale esterno - personale esterno Avv. 6 · CIVITA - Bando selezione allievi Avv. 7 -2° finestra - RIAPERTURA BANDO ALLIEVI ... ADECCO FORMAZIONE SRL - Avv.
+- [Avviso 20/2024 PR FSE+ Sicilia 2021-2027 per la realizzazione di](https://www.formasys.it/wp-content/uploads/2025/09/BANDO-DOCENTI-AVV20.pdf)
+  - September 25, 2025 - Il presente bando di reclutamento è rivolto prioritariamente al personale Docente iscritto nell’albo di cui · all’art.5 della legge regionale 10 Luglio 2019 n.10 e in subordine al personale Docente inserito nel · Registro Elenco dei formatori 2° livello di cui alla legge regionale 23/2019 e ss.mm.ii rilevabili dal ... I docenti interessati devono possedere l’esperienza didattica e professionale espressa in mesi.
+- [DM 38 del 2026 - Bando formazione docenti | Campustore](https://www.campustore.it/bandi-e-finanziamenti/pn-scuola-e-competenze-2021-2027/dm-38-2026-formazione-docenti.html)
+  - L'Avviso 95165, che segue il Decreto ministeriale 38 del 6 marzo 2026, è finalizzato al potenziamento delle competenze professionali del personale docente ed educativo mediante azioni formative nell'ambito del Programma Nazionale "PN Scuola e competenze 2021-2027", in attuazione del regolamento (UE) 2021/1060.
+- [Avviso formazione docenti, chiarimenti del Ministero: delibere anche ...](https://www.orizzontescuola.it/avviso-formazione-docenti-chiarimenti-del-ministero-delibere-anche-dopo-la-candidatura)
+  - In riferimento all'Avviso pubblico prot. n. 95165 del 24 aprile 2026, relativo al finanziamento di attività di formazione rivolte al personale docente ed educativo delle scuole statali nell ...
+
