@@ -14,12 +14,11 @@ workflow usa per aprire una issue di notifica.
 from __future__ import annotations
 
 import json
-import os
-import re
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 try:
     # Pacchetto attuale
@@ -29,30 +28,44 @@ except ImportError:  # pragma: no cover - fallback per versioni vecchie
 
 # --- Configurazione: modifica qui per affinare la ricerca ---------------------
 
-# Query inviate al motore di ricerca. Aggiungine/modificane liberamente.
+# Query inviate al motore di ricerca. Privilegiano i portali e gli albi delle
+# scuole e gli avvisi di SELEZIONE di formatori/esperti.
 QUERIES = [
-    '"avviso 95165" formatori',
-    '"prot. 95165" 2026 selezione formatori scuola',
-    'avviso 95165 PN Scuola e competenze selezione esperti formatori',
-    'selezione formatori formazione personale docente PN Scuola e competenze 2021-2027',
-    'avviso pubblico selezione esperti formatori potenziamento competenze docenti 2026',
-    'bando reclutamento formatori formazione docenti PN scuola competenze avviso',
-    'avviso selezione formatori competenze professionali docenti edu.it 2026',
+    'avviso selezione esperti formatori formazione docenti site:edu.it',
+    'avviso selezione formatori "PN Scuola e competenze" 2021-2027 site:edu.it',
+    'avviso selezione esperti formatori "DM 38/2026" formazione docenti site:edu.it',
+    'reclutamento esperti formatori formazione personale docente avviso site:edu.it',
+    'albo pretorio avviso selezione formatori formazione docenti',
+    'manifestazione di interesse formatori formazione docenti avviso 95165',
+    'bando selezione esperto formatore potenziamento competenze docenti site:edu.it',
+    'avviso 95165 selezione esperti formatori scuola',
 ]
 
-# Il numero di protocollo: se compare, il risultato e' quasi certamente rilevante.
+# Numero di protocollo dell'avviso di riferimento (usato come contesto, non basta
+# da solo a includere un risultato).
 PROTOCOLLO = "95165"
 
+# Domini di news/portali/aziende da ESCLUDERE: non sono bandi delle scuole.
+BLOCKLIST = [
+    "orizzontescuola.it", "euroedizioni.it", "campustore.it", "deascuola.it",
+    "anastasis.it", "qualificagroup.it", "giustoscuola.it", "notiziedellascuola.it",
+    "opencup.gov.it", "regione.sicilia.it", "consorzioulisse.net", "formasys.it",
+    "sinergiediscuola.it", "elissrl.net", "formatori.eu", "pn20212027.istruzione.it",
+    "istruzione.it", "miur.gov.it", "mim.gov.it", "adecco", "indeed", "infojobs",
+]
+
+# Indizi che la fonte e' una scuola o un suo albo/amministrazione trasparente.
+FONTE_SCUOLA = ["edu.it", "albo", "trasparenza", "amministrazione-trasparente",
+                "amministrazionetrasparente", "ckube", "scuolanext", "albopretorio"]
+
+# Parole che indicano una procedura di selezione/reclutamento.
+KW_SELEZIONE = ["selezione", "reclutamento", "manifestazione di interesse",
+                "procedura comparativa", "avviso pubblico", "avviso di selezione",
+                "bando di selezione", "bando", "individuazione", "conferimento incarico",
+                "reperimento", "candidatura", "albo"]
+
 # Parole che indicano la figura cercata (formatore/esperto).
-KW_FIGURA = ["formator", "esperto formator", "esperti formator", "formazione formator"]
-
-# Parole che indicano un bando/avviso di selezione.
-KW_BANDO = ["bando", "avviso", "selezione", "reclutamento", "manifestazione di interesse",
-            "procedura comparativa", "candidatura"]
-
-# Parole che indicano il contesto/programma corretto.
-KW_CONTESTO = ["pn scuola", "scuola e competenze", "potenziamento", "competenze professionali",
-               "formazione del personale", "personale docente", "2021-2027", "95165"]
+KW_FIGURA = ["formator", "esperto", "esperti"]
 
 # Risultati massimi richiesti per ogni query.
 MAX_PER_QUERY = 25
@@ -87,15 +100,32 @@ def normalizza_url(url: str) -> str:
     return url.rstrip("/")
 
 
+def dominio(url: str) -> str:
+    try:
+        return urlparse(url).netloc.lower()
+    except Exception:
+        return ""
+
+
+def fonte_scuola(url: str) -> bool:
+    """True se l'URL e' di una scuola o di un suo albo/trasparenza, escludendo
+    i portali/news della blocklist."""
+    dom = dominio(url)
+    if not dom or any(b in dom for b in BLOCKLIST):
+        return False
+    u = url.lower()
+    return dom.endswith(".edu.it") or any(h in u for h in FONTE_SCUOLA)
+
+
 def e_rilevante(testo: str, url: str) -> bool:
+    # Solo portali/albi delle scuole.
+    if not fonte_scuola(url):
+        return False
     t = f"{testo} {url}".lower()
-    if PROTOCOLLO in t:
-        return True
     ha_figura = any(k in t for k in KW_FIGURA)
-    ha_bando = any(k in t for k in KW_BANDO)
-    ha_contesto = any(k in t for k in KW_CONTESTO)
-    # Deve riguardare un formatore, in un bando, nel contesto giusto.
-    return ha_figura and ha_bando and ha_contesto
+    ha_selezione = any(k in t for k in KW_SELEZIONE)
+    # Deve essere un avviso di selezione/reclutamento che riguarda formatori/esperti.
+    return ha_figura and ha_selezione
 
 
 def cerca() -> list[dict]:
